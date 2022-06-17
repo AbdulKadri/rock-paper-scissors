@@ -12,4 +12,18 @@ function computerPlay() {
     return choice
 }
 
-computerPlay()
+function playRound(playerSelection, computerSelection) {
+    let decision = undefined
+    if (playerSelection == computerSelection) {
+        decision = "Tie! you chose the same things"
+    } else if (playerSelection == "rock" & computerSelection == "paper" || playerSelection == "paper" & computerSelection == "scissors" || playerSelection == "scissors" & computerSelection == "rock") {
+        decision = "You lose!"
+    } else if (playerSelection == "rock" & computerSelection == "scissors" || playerSelection == "paper" & computerSelection == "rock" || playerSelection == "scissors" & computerSelection == "paper") {
+        decision = "You Win!"
+    }
+    return (decision)
+}
+
+const playerSelection = "Rock".toLowerCase();
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection))
