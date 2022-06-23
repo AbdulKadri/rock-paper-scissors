@@ -85,12 +85,12 @@ function playGame(playerSelection, computerSelection) {
 }
 
 function declareWinner() {
-    resetGame();
     if (playerPoints > comptuerPoints) {
         winner.textContent = 'You are the champion!'
     } else {
         winner.textContent = 'Computer prevails and is the champion!'
     }
+    resetGame();
 }
 
 function resetGame() {
